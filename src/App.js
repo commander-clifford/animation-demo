@@ -4,7 +4,6 @@ import { Transition, TransitionGroup } from 'react-transition-group';
 import { enter, exit } from './timelines'; // https://css-tricks.com/animating-between-views-in-react/
 import './App.scss';
 
-import Nav from './components/nav';
 import Launch from './pages/launch';
 import CssDemo from './pages/cssDemo';
 import GsapDemo from './pages/gsapDemo';
@@ -18,7 +17,7 @@ function App() {
         <main className="main">
           <Route render={({ location }) => {
             const { pathname, key } = location;
-            const prevPathname = null;
+            const prevPathname = pathname; // TODO: make this work curr and prev are always the same
             return (
               <TransitionGroup component={null}>
                 <Transition

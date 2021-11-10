@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import './nav.scss';
 class Nav extends Component {
+  
   componentDidMount() {
     const options = document.getElementsByClassName('options');
-
-    // options.forEach((option, i) => {
-    //   this.navTo(option);
-    // });
-
     for (const option of options) {
-      console.log('option',option);
+      // console.log('option',option);
       option.addEventListener('click',() => {
         this.navTo(option);
       });
     }
-
-    // for (var i = 0; i < options.length; i++) {
-    //   this.navTo(options[i]);
-    // }
   }
   componentWillUnmount() {}
 

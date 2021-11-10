@@ -6,7 +6,7 @@ class Launch extends Component {
   componentWillUnmount() {}
   render() {
     return (
-      <div className="component container" id="launch-container">
+      <article className="component container" id="launch-container">
 
         <div className="art__stagger-in art__stagger-out">
           <span>Launch</span>
@@ -16,7 +16,7 @@ class Launch extends Component {
           <Nav {...this.props}/>
         </footer>
 
-      </div>
+      </article>
     )
   }
 }

@@ -9,13 +9,10 @@ class CssDemo extends Component {
 
   }
 
-  onClick = node => {
-    this.props.history.push('/css');
-  }
-
   render() {
     return (
-      <div className="component container" id="css-container">
+      <article className="component container">
+
         <div className="art__stagger-in art__stagger-out">
           <span>CssDemo</span>
         </div>
@@ -23,7 +20,8 @@ class CssDemo extends Component {
         <footer>
           <Nav {...this.props}/>
         </footer>
-      </div>
+
+      </article>
     )
   }
 }

@@ -6,14 +6,17 @@ class LottieDemo extends Component {
   componentWillUnmount() {}
   render() {
     return (
-      <div className="component container" id="css-container">
+      <article className="component container">
+
         <div className="art__stagger-in art__stagger-out">
           <span>LottieDemo</span>
         </div>
+
         <footer>
           <Nav {...this.props}/>
         </footer>
-      </div>
+
+      </article>
     )
   }
 }

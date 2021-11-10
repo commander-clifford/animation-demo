@@ -120,12 +120,12 @@ export const enter = (node, pathname, prevPathname) => {
     console.log('compare',pathname,'to',prevPathname);
 
     // TODO: pathname === prevPathname ? route must be back : Do reverse animation
-    if(false){
-        console.log('they do match: go backward');
-        timeline = enterSlideInFromRightTimeline(node); // do it backwards
+    if(pathname === prevPathname){
+      console.log('they do not match: go forward');
+      timeline = enterSlideInFromLeftTimeline(node); // do it forwards
     } else {
-        console.log('they do not match: go forward');
-        timeline = enterSlideInFromLeftTimeline(node); // do it forwards
+      console.log('they do match: go backward');
+      timeline = enterSlideInFromRightTimeline(node); // do it backwards
     }
 
     window.loadPromise = new Promise(resolve => {
@@ -140,10 +140,10 @@ export const exit = (node, pathname, prevPathname) => {
     let timeline;
 
     // TODO: pathname === prevPathname ? route must be back : Do reverse animation
-    if(false){
-        timeline = exitSlideOutToRightTimeline(node); // do it backwards
-    } else {
+    if(pathname === prevPathname){
         timeline = exitSlideOutToLeftTimeline(node); // do it forwards
+    } else {
+        timeline = exitSlideOutToRightTimeline(node); // do it backwards
     }
 
     window.loadPromise = new Promise(resolve => {

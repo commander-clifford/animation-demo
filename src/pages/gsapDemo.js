@@ -15,14 +15,17 @@ class GsapDemo extends Component {
 
   render() {
     return (
-      <div className="component container" id="css-container">
+      <article className="component container">
+
         <div className="art__stagger-in art__stagger-out">
           <span>GsapDemo</span>
         </div>
+
         <footer>
           <Nav {...this.props}/>
         </footer>
-      </div>
+
+      </article>
     )
   }
 }
