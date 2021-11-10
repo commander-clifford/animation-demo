@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  background: grey;
+
+  & * {
+    color: white;
+  }
+}
