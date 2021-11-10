@@ -12,6 +12,12 @@ class LottieDemo extends Component {
           <span>LottieDemo</span>
         </div>
 
+        <ul>
+          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
+          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
+          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
+        </ul>
+
         <footer>
           <Nav {...this.props}/>
         </footer>

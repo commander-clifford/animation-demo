@@ -17,7 +17,7 @@ function App() {
         <main className="main">
           <Route render={({ location }) => {
             const { pathname, key } = location;
-            const prevPathname = pathname; // TODO: make this work curr and prev are always the same
+            const prevPathname = null;
             return (
               <TransitionGroup component={null}>
                 <Transition
