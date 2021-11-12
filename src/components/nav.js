@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './nav.scss';
 class Nav extends Component {
-  
+
   componentDidMount() {
     const options = document.getElementsByClassName('options');
     for (const option of options) {
@@ -21,7 +21,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="nav">
+      <nav className="nav art__stagger-out">
         <span id="/" className="options">Home</span>
         <span id="/css-demo" className="options">CSS</span>
         <span id="/gsap-demo" className="options">JS(GSAP)</span>

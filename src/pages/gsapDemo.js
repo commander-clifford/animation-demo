@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import Nav from '../components/nav';
+import Section from '../components/section';
 
 class GsapDemo extends Component {
-  componentDidMount() {
-
-  }
-  componentWillUnmount() {
-
-  }
-
-  onClick = node => {
-    this.props.history.push('/css');
-  }
+  
+  componentDidMount() {}
+  componentWillUnmount() {}
 
   render() {
     return (
-      <article className="component container">
+      <article className="pattern-two">
 
-        <div className="art__stagger-in art__stagger-out">
-          <span>GsapDemo</span>
-        </div>
-
-        <ul>
-          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
-          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
-          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
-        </ul>
+        <Section>
+          <span className="art__stagger-in">GSAP Section 1</span>
+        </Section>
+        <Section>
+          <span>GSAP Section 2</span>
+        </Section>
+        <Section>
+          <span>GSAP Section 3</span>
+        </Section>
+        <Section>
+          <span>GSAP Section 4</span>
+        </Section>
+        <Section>
+          <span>GSAP Section 5</span>
+        </Section>
 
         <footer>
           <Nav {...this.props}/>

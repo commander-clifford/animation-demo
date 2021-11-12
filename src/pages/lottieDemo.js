@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 import Nav from '../components/nav';
+import Section from '../components/section';
 
 class LottieDemo extends Component {
+
   componentDidMount() {}
   componentWillUnmount() {}
+
   render() {
     return (
-      <article className="component container">
+      <article className="component pattern-three">
 
-        <div className="art__stagger-in art__stagger-out">
-          <span>LottieDemo</span>
-        </div>
-
-        <ul>
-          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
-          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
-          <li className="art__stagger-in art__stagger-out">lorem ipsum</li>
-        </ul>
+        <Section>
+          <span className="art__stagger-in">Lottie Section 1</span>
+        </Section>
+        <Section>
+          <span>Lottie Section 2</span>
+        </Section>
+        <Section>
+          <span>Lottie Section 3</span>
+        </Section>
+        <Section>
+          <span>Lottie Section 4</span>
+        </Section>
+        <Section>
+          <span>Lottie Section 5</span>
+        </Section>
 
         <footer>
           <Nav {...this.props}/>

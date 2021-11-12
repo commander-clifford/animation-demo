@@ -1,8 +1,40 @@
 .nav {
   display: flex;
-  background: grey;
 
-  & * {
-    color: white;
+  .options {
+    display: block;
+    background: white;
+    height: 60px;
+    margin: 2em;
+    padding: 1em;
+    color: #030327;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80px;
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid white;
+      border-top: 60px solid transparent;
+      transform: rotateX(180deg);
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-left: 40px solid white;
+      border-right: 40px solid transparent;
+      border-top: 60px solid transparent;
+    }
   }
 }
