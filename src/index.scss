@@ -1,7 +1,8 @@
 @import './mixins.scss';
 
 body {
-  @include grey-background--1;
+  @include pattern-three($grey-color);
+  color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
