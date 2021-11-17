@@ -125,7 +125,7 @@ export const enter = (node, pathname, prevPathname) => {
     console.log('compare',pathname,'to',prevPathname);
 
     // TODO: pathname === prevPathname ? route must be back : Do reverse animation
-    if(pathname === prevPathname){
+    if(pathname !== prevPathname){
       console.log('they do not match: go forward');
       timeline = enterSlideInFromLeftTimeline(node); // do it forwards
     } else {
@@ -145,7 +145,7 @@ export const exit = (node, pathname, prevPathname) => {
     let timeline;
 
     // TODO: pathname === prevPathname ? route must be back : Do reverse animation
-    if(pathname === prevPathname){
+    if(pathname !== prevPathname){
         timeline = exitSlideOutToLeftTimeline(node); // do it forwards
     } else {
         timeline = exitSlideOutToRightTimeline(node); // do it backwards
