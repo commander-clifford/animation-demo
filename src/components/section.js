@@ -7,7 +7,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <section className={this.props.classy + ' ' + this.props.color+'-bg section'}>
+      <section id={this.props.id} className={this.props.classy + ' ' + this.props.color+'-bg section'}>
         <div className={ 'section__container container-fluid' }>
           {this.props.children}
         </div>

@@ -40,6 +40,22 @@ code {
   backdrop-filter: blur(0.5em) brightness(.97) contrast(1.2);
   background-color: rgba(0,0,0,0.05);
   box-shadow: -2px -2px 2em 0.25em inset rgba(0,0,0,0.1);
+  &--padded {
+    padding: 1em 4em;
+  }
+}
+.info-block {
+  display: block;
+  border-top: 4px solid rgba(255,255,255,0.5);
+  border-radius: 0.25em;
+  padding: 1em 2em;
+  text-align: left;
+  backdrop-filter: blur(0.5em) brightness(.97) contrast(1.2);
+  background-color: rgba(255,255,255,0.05);
+  box-shadow: -2px -2px 2em 0.25em inset rgba(255,255,255,0.1);
+  &--padded {
+    padding: 1em 4em;
+  }
 }
 
 article {

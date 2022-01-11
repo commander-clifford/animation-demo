@@ -6,22 +6,26 @@ import { gsap } from 'gsap';
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+ScrollTrigger.defaults({
+  toggleActions: "restart pause resume pause",
+  scroller: ".component",
+  markers: true
+});
+
 class Launch extends Component {
 
   gsapHeart(){
+    var heartSection = document.getElementById("heart-section");
     var heart = document.getElementById("js-heart");
     let timeline = gsap.timeline({
       scrollTrigger:{
-        trigger: ".heart-section",
-        start: "center bottom",
-        end: "center top",
-        markers: true
+        trigger: heartSection,
       },
       repeat: -1,
       yoyo: false,
       defaults: {
-        duration: 0.1,
         ease: "none",
+        duration: 0.2,
       }
     })
     .to(heart,{ scale:1 })
@@ -61,17 +65,14 @@ class Launch extends Component {
     	y:0
     });
 
-    let timeline = gsap.timeline({
-      repeat: -1,
-      yoyo: false
-    });
-
-    // create the physics2D animation
-    timeline.to(dots, {
+    let ballsTimeline = gsap.timeline({
+      scrollTrigger: ".js-balls-section"
+    })
+    .to(dots, { // create the physics2D animation
       duration: 1,
       autoAlpha: 1
-    });
-    timeline.to(dots, {
+    })
+    .to(dots, {
       duration: 5,
       autoAlpha: 1,
       physics2D: {
@@ -81,7 +82,7 @@ class Launch extends Component {
       },
       delay: "random(0, 5)"
     });
-    return timeline;
+    return ballsTimeline;
   }
 
   componentDidMount() {
@@ -108,7 +109,7 @@ class Launch extends Component {
         </Section>
 
         <Section color="purple">
-          <h2 className="hero d-flex flex-row justify-content-center align-items-center art__stagger-in">
+          <h2 className="hero d-flex flex-row justify-content-center align-items-center">
             I <span className="heart heart--animated my-5"></span> CSS Animations
           </h2>
           <div>
@@ -138,12 +139,9 @@ class Launch extends Component {
         <Section color="purple">
           <div>
             <p className="mb-5"><b>CSS</b> animations directly change an element's style properties right from the <b>cascading style sheet</b> (CSS).</p>
-
           </div>
-
           <div className="d-flex align-item-center">
             <div className="mx-5" id="bounce-ball"></div>
-
             <div className="code-block my-5 mx-2">
               <pre>
                 <code>{"animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.88)"}</code>
@@ -162,44 +160,46 @@ class Launch extends Component {
                 <code>{"  60% { background: LIME; }"}</code>
                 <code>{"  80% { background: TEAL; }"}</code>
                 <code>{"}"}</code>
-
               </pre>
             </div>
-
           </div>
-
           <div>
             <a className="mt-5 d-block" href="https://codepen.io/commander-clifford/pen/zmaMPv" target="_blank">Bouncy Ball on CodePen.io</a>
           </div>
-
         </Section>
 
         <Section color="purple">
+          <h3 className="mb-5">CSS Animations are:</h3>
+          <div className="info-block info-block--padded">
+            <ul>
+              <li>Light-Weight</li>
+              <li><i>Easy</i> to code</li>
+              <li>Good for 'simple' interations</li>
+              <li>Great for loading indications</li>
+              <li>Difficult to time</li>
+              <li>Difficult to add dynamic attributes</li>
+            </ul>
+          </div>
 
-
-              <h3 className="">CSS Animations are:</h3>
-              <div className="code-block">
-                <ul>
-                  <li>Light-Weight</li>
-                  <li>~Easy~ to code</li>
-                  <li>Good for 'simple' interations</li>
-                  <li>Great for loading indications</li>
-                  <li>Difficult to time</li>
-                  <li>Difficult to add dynamic variables</li>
-                </ul>
-              </div>
-
-
-
+          <div className="code-block my-5 mx-2">
+            <pre>
+              <code>{"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }"}</code>
+              <code>{"ul:hover { transform: scale(1.1); }"}</code>
+              <code>{"ul:hover li { transform: translateX(1em); opacity: 0.6; }"}</code>
+              <code>{"ul li:hover { transform: translateX(0); opacity: 1; }"}</code>
+            </pre>
+          </div>
         </Section>
 
-        <Section classy="heart-section" color="green">
-          <h2 className="hero d-flex flex-row justify-content-center align-items-center art__stagger-in">
-            I <span id="js-heart" className="heart my-5"></span> JS Animations
-          </h2>
+        <Section id="heart-section" color="green">
+          <div>
+            <h2 className="hero d-flex flex-row justify-content-center align-items-center">
+              I <span id="js-heart" className="heart my-5"></span> JS Animations
+            </h2>
+          </div>
         </Section>
 
-        <Section color="green">
+        <Section classy="js-balls-section" color="green">
           <div id="featureBackground"></div>
           <p className="mb-5">JavaScript (<b>JS</b>) animations also manipulate element styles. However, unlike css animations, JS animations add dynamic capabilities.</p>
         </Section>
