@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../components/nav';
 import Section from '../components/section';
+import Code from '../components/code';
 import './launch.scss';
 import { gsap } from 'gsap';
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";
@@ -9,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 ScrollTrigger.defaults({
   toggleActions: "restart pause resume pause",
   scroller: ".component",
-  markers: true
+  // markers: true
 });
 
 class Launch extends Component {
@@ -24,7 +25,7 @@ class Launch extends Component {
       repeat: -1,
       yoyo: false,
       defaults: {
-        ease: "none",
+        ease: "ease",
         duration: 0.2,
       }
     })
@@ -64,7 +65,6 @@ class Launch extends Component {
     	x:0,
     	y:0
     });
-
     let ballsTimeline = gsap.timeline({
       scrollTrigger: ".js-balls-section"
     })
@@ -113,26 +113,22 @@ class Launch extends Component {
             I <span className="heart heart--animated my-5"></span> CSS Animations
           </h2>
           <div>
-
-            <div className="code-block mt-5">
-              <pre>
-                <code>{"animation: 2s linear 0s normal none infinite heartBeat"}</code>
-                <code>{"@keyframes heartBeat{"}</code>
-                <code>{"  0%   { transform: scale("}<b>1</b>{") }"}</code>
-                <code>{"  7%   { transform: scale("}<b>1.2</b>{") }"}</code>
-                <code>{"  14%  { transform: scale("}<b>1</b>{") }"}</code>
-                <code>{"  40%  { transform: scale("}<b>1</b>{") }"}</code>
-                <code>{"  47%  { transform: scale("}<b>1.2</b>{") }"}</code>
-                <code>{"  55%  { transform: scale("}<b>1</b>{") }"}</code>
-                <code>{"  62%  { transform: scale("}<b>1.2</b>{") }"}</code>
-                <code>{"  69%  { transform: scale("}<b>1</b>{") }"}</code>
-                <code>{"  100% { transform: scale("}<b>1</b>{") }"}</code>
-                <code>{"}"}</code>
-              </pre>
-            </div>
-
+            <Code>
+                {"animation: 2s linear 0s normal none infinite heartBeat"}
+                {" "}
+                {"@keyframes heartBeat{"}
+                {"  0%   { transform: scale(1) }"}
+                {"  7%   { transform: scale(1.2) }"}
+                {"  14%  { transform: scale(1) }"}
+                {"  40%  { transform: scale(1) }"}
+                {"  47%  { transform: scale(1.2) }"}
+                {"  55%  { transform: scale(1) }"}
+                {"  62%  { transform: scale(1.2) }"}
+                {"  69%  { transform: scale(1) }"}
+                {"  100% { transform: scale(1) }"}
+                {"}"}
+            </Code>
             <a className="mt-5 d-block" href="https://codepen.io/commander-clifford/pen/wckxp" target="_blank">Heart Beat on CodePen.io</a>
-
           </div>
         </Section>
 
@@ -142,26 +138,23 @@ class Launch extends Component {
           </div>
           <div className="d-flex align-item-center">
             <div className="mx-5" id="bounce-ball"></div>
-            <div className="code-block my-5 mx-2">
-              <pre>
-                <code>{"animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.88)"}</code>
-                <code>{"@keyframes bounce {"}</code>
-                <code>{"  0% {   transform: translateY(0) }"}</code>
-                <code>{"  100% { transform: translateY(200px) }"}</code>
-                <code>{"}"}</code>
-              </pre>
-            </div>
-            <div className="code-block my-5 mx-2">
-              <pre>
-                <code>{"@keyframes colorRotate {"}</code>
-                <code>{"  0% { background: GREEN; }"}</code>
-                <code>{"  20% { background: BLUE; }"}</code>
-                <code>{"  40% { background: WHITE; }"}</code>
-                <code>{"  60% { background: LIME; }"}</code>
-                <code>{"  80% { background: TEAL; }"}</code>
-                <code>{"}"}</code>
-              </pre>
-            </div>
+            <Code className="my-5 mx-2">
+              {"animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.88)"}
+              {" "}
+              {"@keyframes bounce {"}
+              {"  0% {   transform: translateY(0) }"}
+              {"  100% { transform: translateY(200px) }"}
+              {"}"}
+              {" "}
+              {"@keyframes colorRotate {"}
+              {"  0% { background: GREEN; }"}
+              {"  20% { background: BLUE; }"}
+              {"  40% { background: WHITE; }"}
+              {"  60% { background: LIME; }"}
+              {"  80% { background: TEAL; }"}
+              {"}"}
+            </Code>
+
           </div>
           <div>
             <a className="mt-5 d-block" href="https://codepen.io/commander-clifford/pen/zmaMPv" target="_blank">Bouncy Ball on CodePen.io</a>
@@ -176,19 +169,17 @@ class Launch extends Component {
               <li><i>Easy</i> to code</li>
               <li>Good for 'simple' interations</li>
               <li>Great for loading indications</li>
+              <li>Quick load time</li>
               <li>Difficult to time</li>
               <li>Difficult to add dynamic attributes</li>
             </ul>
           </div>
-
-          <div className="code-block my-5 mx-2">
-            <pre>
-              <code>{"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }"}</code>
-              <code>{"ul:hover { transform: scale(1.1); }"}</code>
-              <code>{"ul:hover li { transform: translateX(1em); opacity: 0.6; }"}</code>
-              <code>{"ul li:hover { transform: translateX(0); opacity: 1; }"}</code>
-            </pre>
-          </div>
+          <Code>
+            {"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }"}
+            {"ul:hover { transform: scale(1.1); }"}
+            {"ul:hover li { transform: translateX(1em); opacity: 0.6; }"}
+            {"ul li:hover { transform: translateX(0); opacity: 1; }"}
+          </Code>
         </Section>
 
         <Section id="heart-section" color="green">
@@ -197,11 +188,71 @@ class Launch extends Component {
               I <span id="js-heart" className="heart my-5"></span> JS Animations
             </h2>
           </div>
+          <Code>
+            {'let timeline = gsap.timeline({'}
+            {'  scrollTrigger:{'}
+            {'    trigger: heartSection,'}
+            {'  },'}
+            {'  repeat: -1,'}
+            {'  yoyo: false,'}
+            {'  defaults: {'}
+            {'    ease: "ease",'}
+            {'    duration: 0.2,'}
+            {'  }'}
+            {'})'}
+            {'.to(heart,{ scale:1 })'}
+            {'.to(heart,{ scale:1.2, delay: 0.4 })'}
+            {'.to(heart,{ scale:1 })'}
+            {'.to(heart,{ scale:1.2 })'}
+            {'.to(heart,{ scale:1 })'}
+            {'.to(heart,{ scale:1.2, delay: 0.8 })'}
+            {'.to(heart,{ scale:1 })'}
+            {';'}
+            {'return timeline;'}
+          </Code>
         </Section>
 
         <Section classy="js-balls-section" color="green">
           <div id="featureBackground"></div>
           <p className="mb-5">JavaScript (<b>JS</b>) animations also manipulate element styles. However, unlike css animations, JS animations add dynamic capabilities.</p>
+          <Code>
+            {'gsap.set(dots, {'}
+            {'  backgroundColor: "random([#5B16BD,#28a92b,#e77614,#122cb3,#b31232])",'}
+            {'  scale: "random(0.4, 1)",'}
+            {'  autoAlpha: 0,'}
+            {'  ...'}
+            {''}
+            {'.to(dots, {'}
+            {'  duration: 5,'}
+            {'  autoAlpha: 1,'}
+            {'  physics2D: {'}
+            {'    velocity: "random(200, 750)",'}
+            {'    angle: "random(250, 290)",'}
+            {'    gravity: 900'}
+            {'  },'}
+            {'  delay: "random(0, 5)"'}
+            });
+          </Code>
+        </Section>
+
+        <Section color="green">
+          <h3 className="mb-5">JS Animations are:</h3>
+          <div className="info-block info-block--padded">
+            <ul>
+              <li>often require a library </li>
+              <li><i>Easy</i> to code, with a library such as GSAP</li>
+              <li>Good for 'complex' interations</li>
+              <li>Good for loading indications</li>
+              <li>Easy to time</li>
+              <li>Easy to add dynamic attributes</li>
+            </ul>
+          </div>
+          <Code>
+            {"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }"}
+            {"ul:hover { transform: scale(1.1); }"}
+            {"ul:hover li { transform: translateX(1em); opacity: 0.6; }"}
+            {"ul li:hover { transform: translateX(0); opacity: 1; }"}
+          </Code>
         </Section>
 
 

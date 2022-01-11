@@ -1,0 +1,33 @@
+
+code {
+  display: block;
+  white-space: pre-wrap
+}
+
+.code {
+  &__container {
+    position: relative;
+    display: block;
+    border-top: 1.4em solid rgba(0,0,0,0.5);
+    border-radius: 0.25em;
+    padding: 1em 2em;
+    text-align: left;
+    backdrop-filter: blur(0.5em) brightness(.97) contrast(1.2);
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: -2px -2px 2em 0.25em inset rgba(0,0,0,0.1);
+    &--padded {
+      padding: 1em 4em;
+    }
+  }
+  &__caption {
+    color: rgba(255,255,255,0.5);
+    display: block;
+    position: absolute;
+    top: -1.4em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1em;
+  }
+
+}
