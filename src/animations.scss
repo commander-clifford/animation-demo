@@ -1,0 +1,66 @@
+@import './variables.scss';
+
+@keyframes heartBeat{
+    0%   { transform: scale(1); }
+    7%  { transform: scale(1.2); }
+    14%  { transform: scale(1); }
+    40%  { transform: scale(1); }
+    47%  { transform: scale(1.2); }
+    55%  { transform: scale(1); }
+    62%  { transform: scale(1.2); }
+    69%  { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes example_1 {
+
+  0% {
+    transform: rotate(0deg);
+    left: -20vw;
+  }
+
+  25% {
+    transform: rotate(360deg);
+    left: 20vw;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    left: 20vw;
+    background: $blue-color;
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    left: -20vw;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200px);
+
+  }
+}
+
+@keyframes rgb-color-change {
+  // 0% {
+  //   background: $red-color;
+  // }
+  // 33% {
+  //   background: $green-color;
+  // }
+  // 66% {
+  //   background: $blue-color;
+  // }
+
+
+  0% { background: #96CA2D; }
+  20% { background: #4BB5C1; }
+  40% { background: #EDF7F2; }
+  60% { background: #B5E655; }
+  80% { background: #7FC6BC; }
+}

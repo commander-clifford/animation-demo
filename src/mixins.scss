@@ -1,11 +1,6 @@
-$red-color: #c82736;
-$blue-color: #2c7ad2;
-$purple-color: #8d3dae;
-$orange-color: #e77614;
-$green-color: #28a92b;
-$grey-color: #777777;
+@import './variables.scss';
 
-// -_-_- PATTERN ONE -_-_- //
+// -_-_- BG PATTERN ONE -_-_- //
 @mixin pattern-one($color) {
   background-attachment: fixed;
   background-color: $color;
@@ -17,22 +12,10 @@ $grey-color: #777777;
   radial-gradient(circle at 23% 82%, rgba(249, 249, 249,0.04) 0%, rgba(249, 249, 249,0.04) 60%,transparent 60%, transparent 100%),
   radial-gradient(circle at 11% 54%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 23%,transparent 23%, transparent 100%),
   radial-gradient(circle at 69% 68%, rgba(234, 234, 234,0.04) 0%, rgba(234, 234, 234,0.04) 10%,transparent 10%, transparent 100%),
-  linear-gradient(90deg, $color, lighten($color, 8%));
+  linear-gradient(45deg, darken($color, 12%), lighten($color, 12%));
 }
-.red-bg--1 { @include pattern-one($red-color); }
-.blue-bg--1 { @include pattern-one($blue-color); }
-.purple-bg--1 { @include pattern-one($purple-color); }
-.orange-bg--1 { @include pattern-one($orange-color); }
-.green-bg--1 { @include pattern-one($green-color); }
-.grey-bg--1 { @include pattern-one($grey-color); }
 
-article.pattern-one > section:nth-child(1n) { @include pattern-one($red-color); }
-article.pattern-one > section:nth-child(2n) { @include pattern-one($blue-color); }
-article.pattern-one > section:nth-child(3n) { @include pattern-one($purple-color); }
-article.pattern-one > section:nth-child(4n) { @include pattern-one($orange-color); }
-article.pattern-one > section:nth-child(5n) { @include pattern-one($green-color); }
-
-// -_-_- PATTERN TWO -_-_- //
+// -_-_- BG PATTERN TWO -_-_- //
 @mixin pattern-two($color) {
   background-attachment: fixed;
   background-color: $color;
@@ -45,23 +28,10 @@ article.pattern-one > section:nth-child(5n) { @include pattern-one($green-color)
     radial-gradient(circle at 71% 42%, rgba(156, 156, 156,0.04) 0%, rgba(156, 156, 156,0.04) 47%,transparent 47%, transparent 100%),
     radial-gradient(circle at 46% 82%, rgba(247, 247, 247,0.04) 0%, rgba(247, 247, 247,0.04) 39%,transparent 39%, transparent 100%),
     radial-gradient(circle at 50% 47%, rgba(209, 209, 209,0.04) 0%, rgba(209, 209, 209,0.04) 45%,transparent 45%, transparent 100%),
-    linear-gradient(90deg, $color, lighten($color, 8%));
+    linear-gradient(45deg, darken($color, 12%), lighten($color, 12%));
 }
-.red-bg--2 { @include pattern-two($red-color); }
-.blue-bg--2 { @include pattern-two($blue-color); }
-.purple-bg--2 { @include pattern-two($purple-color); }
-.orange-bg--2 { @include pattern-two($orange-color); }
-.green-bg--2 { @include pattern-two($green-color); }
-.grey-bg--2 { @include pattern-two($grey-color); }
 
-article.pattern-two > section:nth-child(1n) { @include pattern-two($red-color); }
-article.pattern-two > section:nth-child(2n) { @include pattern-two($blue-color); }
-article.pattern-two > section:nth-child(3n) { @include pattern-two($purple-color); }
-article.pattern-two > section:nth-child(4n) { @include pattern-two($orange-color); }
-article.pattern-two > section:nth-child(5n) { @include pattern-two($green-color); }
-
-
-// -_-_- PATTERN THREE -_-_- //
+// -_-_- BG PATTERN THREE -_-_- //
 @mixin pattern-three($color) {
   background-attachment: fixed;
   background-color: $color;
@@ -74,17 +44,22 @@ article.pattern-two > section:nth-child(5n) { @include pattern-two($green-color)
     radial-gradient(circle at 59% 54%, rgba(39, 39, 39,0.06) 0%, rgba(39, 39, 39,0.06) 49%,transparent 49%, transparent 100%),
     radial-gradient(circle at 98% 38%, rgba(157, 157, 157,0.06) 0%, rgba(157, 157, 157,0.06) 24%,transparent 24%, transparent 100%),
     radial-gradient(circle at 8% 6%, rgba(60, 60, 60,0.06) 0%, rgba(60, 60, 60,0.06) 12%,transparent 12%, transparent 100%),
-    linear-gradient(90deg, $color, lighten($color, 8%)  );
+    linear-gradient(45deg, darken($color, 12%), lighten($color, 12%));
 }
-.red-bg--3 { @include pattern-three($red-color); }
-.blue-bg--3 { @include pattern-three($blue-color); }
-.purple-bg--3 { @include pattern-three($purple-color); }
-.orange-bg--3 { @include pattern-three($orange-color); }
-.green-bg--3 { @include pattern-three($green-color); }
-.grey-bg--3 { @include pattern-three($grey-color); }
 
-article.pattern-three > section:nth-child(1n) { @include pattern-three($red-color); }
-article.pattern-three > section:nth-child(2n) { @include pattern-three($blue-color); }
-article.pattern-three > section:nth-child(3n) { @include pattern-three($purple-color); }
-article.pattern-three > section:nth-child(4n) { @include pattern-three($orange-color); }
-article.pattern-three > section:nth-child(5n) { @include pattern-three($green-color); }
+// -_-_- 3D TEXT SHADOW -_-_- //
+@mixin text-shadow-3d($color) {
+  text-shadow: -0.01em 0.01em darken($color, 30%),
+                -0.02em 0.02em darken($color, 25%),
+                -0.03em 0.03em darken($color, 20%),
+                -0.04em 0.04em darken($color, 15%),
+                -0.05em 0.05em darken($color, 10%),
+                -0.06em 0.06em darken($color, 5%);
+  font-weight: bold;
+  // text-shadow: -0.01em 0.01em darken($color, 8%),
+  //               -0.02em 0.02em darken($color, 14%),
+  //               -0.03em 0.03em darken($color, 22%),
+  //               -0.04em 0.04em darken($color, 26%),
+  //               -0.05em 0.05em darken($color, 30%),
+  //               -0.06em 0.06em darken($color, 34%);
+}

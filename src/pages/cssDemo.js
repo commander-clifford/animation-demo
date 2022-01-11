@@ -11,19 +11,19 @@ class CssDemo extends Component {
     return (
       <article className="pattern-one">
 
-        <Section>
+        <Section color="red">
           <span className="art__stagger-in">CSS Section 1</span>
         </Section>
-        <Section>
+        <Section color="red">
           <span>CSS Section 2</span>
         </Section>
-        <Section>
+        <Section color="red">
           <span>CSS Section 3</span>
         </Section>
-        <Section>
+        <Section color="red">
           <span>CSS Section 4</span>
         </Section>
-        <Section>
+        <Section color="red">
           <span>CSS Section 5</span>
         </Section>
 
