@@ -85,6 +85,57 @@ class Launch extends Component {
     return ballsTimeline;
   }
 
+  // GSAP hover list
+  gsapList(){
+    const jsListSection = document.getElementById("js-list-section");
+    // const ul = document.querySelector("ul.gsap-list");
+    const lis = document.querySelectorAll("ul.gsap-list li");
+    // const liArray = Array.from(lis);
+
+    // console.log('ul',ul);
+    // console.log('lis',lis);
+    // console.log('lis.length',lis.length);
+
+    let duration = 1;
+    let stagger = 3;
+    let reducedOpacity = 0.4;
+    let increasedScale = 1.1;
+    let overlap = lis.length*(stagger-duration)+(stagger-duration);
+
+    let timeline = gsap.timeline({
+      scrollTrigger:{
+        trigger: jsListSection,
+      },
+      delay: 1,
+      // repeatDelay: 4,
+      // repeat: -1,
+      yoyo: false,
+      defaults: {
+        ease: "ease",
+        duration: duration,
+      }
+    })
+    .fromTo(lis,{
+      opacity: reducedOpacity,
+      scale: 1
+    },{
+      opacity: 1,
+      scale: increasedScale,
+      stagger: stagger
+    })
+    .to(lis,{
+      opacity: reducedOpacity,
+      scale: 1,
+      stagger: stagger
+    },"-="+overlap)
+    .to(lis,{
+      opacity: 1,
+      scale: increasedScale,
+    })
+
+  }
+
+
   componentDidMount() {
 
     gsap.registerPlugin(Physics2DPlugin);
@@ -93,6 +144,8 @@ class Launch extends Component {
     this.gsapHeart();
 
     this.gsapPartyBalls();
+
+    this.gsapList();
 
   }
 
@@ -163,7 +216,7 @@ class Launch extends Component {
 
         <Section color="purple">
           <h3 className="mb-5">CSS Animations are:</h3>
-          <div className="info-block info-block--padded">
+          <div className="info-block info-block--padded css-list">
             <ul>
               <li>Light-Weight</li>
               <li><i>Easy</i> to code</li>
@@ -235,13 +288,13 @@ class Launch extends Component {
           </Code>
         </Section>
 
-        <Section color="green">
+        <Section id="js-list-section" color="green">
           <h3 className="mb-5">JS Animations are:</h3>
           <div className="info-block info-block--padded">
-            <ul>
-              <li>often require a library </li>
-              <li><i>Easy</i> to code, with a library such as GSAP</li>
-              <li>Good for 'complex' interations</li>
+            <ul className="gsap-list">
+              <li>easiest when used with a Library, such as GSAP</li>
+              <li>Great for 'complex' animations</li>
+              <li>Great for 'complex' interations</li>
               <li>Good for loading indications</li>
               <li>Easy to time</li>
               <li>Easy to add dynamic attributes</li>
