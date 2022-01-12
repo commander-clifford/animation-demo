@@ -1,6 +1,43 @@
-import React, { Component } from 'react';
+import React, { Component, useState, memo, useRef, useEffect } from 'react';
 import Nav from '../components/nav';
 import Section from '../components/section';
+import Lottie from 'react-lottie-player'
+import lottieCar from "./lottieCar.json";
+import lottieBicycle from "./lottieBicycle.json";
+import lottieLab from "./lottieLab.json";
+import lottieStory from "./lottieStory.json";
+import lottieFullStack from "./lottieFullStack.json";
+
+/**
+  *  Lottie ScrollyBicycle
+  *
+  */
+const ScrollyBicycle = memo(() => {
+  const scrollRef = useRef();
+  const [animationPosition, setAnimationPosition] = useState(0);
+
+  useEffect(() => {
+    function handleScroll(e) {
+      setAnimationPosition(Math.max((0, e.target.scrollTop - 50) * 0.4));
+    }
+    const scroller = scrollRef.current
+    scroller.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      scroller.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <div ref={scrollRef} style={{ height: 800, overflowY: 'scroll' }}>
+      <Lottie
+        animationData={lottieBicycle}
+        goTo={animationPosition}
+        style={{ width: 400, height: 800, alignSelf: 'center', marginTop: 200, marginBottom: 600 }}
+      />
+    </div>
+  )
+});
 
 class LottieDemo extends Component {
 
@@ -11,20 +48,47 @@ class LottieDemo extends Component {
     return (
       <article className="component pattern-three">
 
-        <Section>
-          <span className="art__stagger-in">Lottie Section 1</span>
+        <Section color="blue">
+          <h1 className="hero art__stagger-in">Lottie Animations</h1>
         </Section>
-        <Section>
-          <span>Lottie Section 2</span>
+
+        <Section color="blue">
+            <Lottie
+              animationData={lottieBicycle}
+              play
+              style={{ width: 600, height: 600 }}
+            />
         </Section>
-        <Section>
-          <span>Lottie Section 3</span>
+
+        <Section color="blue">
+            <Lottie
+              animationData={lottieLab}
+              play
+              style={{ width: 600, height: 600 }}
+            />
         </Section>
-        <Section>
-          <span>Lottie Section 4</span>
+
+        <Section color="blue">
+            <Lottie
+              animationData={lottieStory}
+              play
+              style={{ width: 600, height: 600 }}
+            />
         </Section>
-        <Section>
-          <span>Lottie Section 5</span>
+
+        <Section color="blue">
+            <Lottie
+              animationData={lottieFullStack}
+              play
+              style={{ width: 600, height: 600 }}
+            />
+        </Section>
+
+        <Section color="blue">
+          next time...
+
+          Lottie animations with rastor video scenes
+          Lottie animations with scroll pin trigger
         </Section>
 
         <footer>

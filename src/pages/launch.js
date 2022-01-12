@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, memo, useRef, useEffect } from 'react';
 import Nav from '../components/nav';
 import Section from '../components/section';
 import Code from '../components/code';
@@ -6,6 +6,15 @@ import './launch.scss';
 import { gsap } from 'gsap';
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lottie from 'react-lottie-player'
+import lottieHeart from "./lottieHeart.json";
+import lottieBear from "./lottieBear.json";
+import lottieCar from "./lottieCar.json";
+import { create } from "@lottiefiles/lottie-interactivity";
+
+
+
+
 
 ScrollTrigger.defaults({
   toggleActions: "restart pause resume pause",
@@ -85,31 +94,19 @@ class Launch extends Component {
     return ballsTimeline;
   }
 
-  // GSAP hover list
   gsapList(){
     const jsListSection = document.getElementById("js-list-section");
-    // const ul = document.querySelector("ul.gsap-list");
     const lis = document.querySelectorAll("ul.gsap-list li");
-    // const liArray = Array.from(lis);
 
-    // console.log('ul',ul);
-    // console.log('lis',lis);
-    // console.log('lis.length',lis.length);
-
-    let duration = 1;
-    let stagger = 3;
+    let duration = 0.4;
+    let stagger = 2;
     let reducedOpacity = 0.4;
     let increasedScale = 1.1;
-    let overlap = lis.length*(stagger-duration)+(stagger-duration);
 
     let timeline = gsap.timeline({
       scrollTrigger:{
         trigger: jsListSection,
       },
-      delay: 1,
-      // repeatDelay: 4,
-      // repeat: -1,
-      yoyo: false,
       defaults: {
         ease: "ease",
         duration: duration,
@@ -127,7 +124,7 @@ class Launch extends Component {
       opacity: reducedOpacity,
       scale: 1,
       stagger: stagger
-    },"-="+overlap)
+    },"<"+stagger)
     .to(lis,{
       opacity: 1,
       scale: increasedScale,
@@ -135,6 +132,9 @@ class Launch extends Component {
 
   }
 
+  lottieHeart(){
+
+  }
 
   componentDidMount() {
 
@@ -142,16 +142,19 @@ class Launch extends Component {
     gsap.registerPlugin(ScrollTrigger);
 
     this.gsapHeart();
-
     this.gsapPartyBalls();
-
     this.gsapList();
+
+    this.lottieHeart();
+
+
 
   }
 
   componentWillUnmount() {}
 
   render() {
+
     return (
       <article className="component pattern-three">
 
@@ -267,8 +270,10 @@ class Launch extends Component {
 
         <Section classy="js-balls-section" color="green">
           <div id="featureBackground"></div>
-          <p className="mb-5">JavaScript (<b>JS</b>) animations also manipulate element styles. However, unlike css animations, JS animations add dynamic capabilities.</p>
+          <p className="mb-5">JavaScript (<b>JS</b>) animations, like CSS, also manipulate an elements style properties. However, unlike CSS, JS animations do so from a programatic level.</p>
           <Code>
+            {'for (i = 0; i < 360; i++) { dot = document.createElement...'}
+            {' '}
             {'gsap.set(dots, {'}
             {'  backgroundColor: "random([#5B16BD,#28a92b,#e77614,#122cb3,#b31232])",'}
             {'  scale: "random(0.4, 1)",'}
@@ -301,12 +306,59 @@ class Launch extends Component {
             </ul>
           </div>
           <Code>
-            {"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }"}
-            {"ul:hover { transform: scale(1.1); }"}
-            {"ul:hover li { transform: translateX(1em); opacity: 0.6; }"}
-            {"ul li:hover { transform: translateX(0); opacity: 1; }"}
+            {".fromTo(lis,{"}
+            {"  opacity: reducedOpacity,"}
+            {"  scale: 1"}
+            {"},{"}
+            {"  opacity: 1,"}
+            {"  scale: increasedScale,"}
+            {"  stagger: stagger"}
+            {"})"}
+            {".to(lis,{"}
+            {"  opacity: reducedOpacity,"}
+            {"  scale: 1,"}
+            {"  stagger: stagger"}
           </Code>
         </Section>
+
+        <Section id="js-list-section" color="blue">
+          <h2 className="hero d-flex flex-row justify-content-center align-items-center">
+            I <Lottie loop animationData={lottieHeart} play style={{ width: 150, height: 150 }}/> Lottie Animations
+          </h2>
+        </Section>
+
+
+        <Section color="blue">
+          <p className="mb-5"><b>SPOILER ALERT!!</b><br/>Lottie animations are JS animations!<br/><br/>However!<br/>Lottie is SO amazing because these animation assets are direct exports from AfterEffects!!!</p>
+          <Lottie loop animationData={lottieBear} play style={{ width: 400, height: 400 }}/>
+        </Section>
+
+        <Section color="blue">
+          <p className="mb-5">This enables designers to build animation assets in thier familiar environments. <br/><br/>While also enabling developers to deliver these animations with 100% fidelity, and abilities to further customize the interations and other attributes.</p>
+          <Lottie loop animationData={lottieCar} play style={{ width: 600, height: 400 }}/>
+        </Section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
