@@ -4,7 +4,7 @@
 
 
 .css-list {
-  ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }
+  ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: default;; }
   ul:hover { transform: scale(1.1); }
   ul:hover li { transform: translateX(1em); opacity: 0.6; }
   ul li:hover { transform: translateX(0); opacity: 1; }

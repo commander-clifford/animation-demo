@@ -10,6 +10,8 @@ import Lottie from 'react-lottie-player'
 import lottieHeart from "./lottieHeart.json";
 import lottieBear from "./lottieBear.json";
 import lottieCar from "./lottieCar.json";
+import lottieEditor from "./lottieEditor.json";
+import lottieDial from "./lottieDial.json";
 import { create } from "@lottiefiles/lottie-interactivity";
 
 
@@ -99,7 +101,7 @@ class Launch extends Component {
     const lis = document.querySelectorAll("ul.gsap-list li");
 
     let duration = 0.4;
-    let stagger = 2;
+    let stagger = 3;
     let reducedOpacity = 0.4;
     let increasedScale = 1.1;
 
@@ -185,6 +187,7 @@ class Launch extends Component {
                 {"}"}
             </Code>
             <a className="mt-5 d-block" href="https://codepen.io/commander-clifford/pen/wckxp" target="_blank">Heart Beat on CodePen.io</a>
+            <a className="mt-5 d-block" href="https://www.w3schools.com/cssref/css3_pr_animation.asp" target="_blank">Animation Property from W3Schools</a>
           </div>
         </Section>
 
@@ -195,8 +198,15 @@ class Launch extends Component {
           <div className="d-flex align-item-center">
             <div className="mx-5" id="bounce-ball"></div>
             <Code className="my-5 mx-2">
-              {"animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.88)"}
-              {" "}
+              {'animation-name: bounce, colorRotate;'}
+              {'animation-duration: 0.6s, 12s;'}
+              {'animation-delay: 0s;'}
+              {'animation-iteration-count: infinite;'}
+              {'animation-direction: alternate;'}
+              {'animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.88), linear;'}
+              {'animation-fill-mode: both;'}
+            </Code>
+            <Code className="my-5 mx-2">
               {"@keyframes bounce {"}
               {"  0% {   transform: translateY(0) }"}
               {"  100% { transform: translateY(200px) }"}
@@ -224,6 +234,7 @@ class Launch extends Component {
               <li>Light-Weight</li>
               <li><i>Easy</i> to code</li>
               <li>Good for 'simple' interations</li>
+              <li>Great for cursor hover events</li>
               <li>Great for loading indications</li>
               <li>Quick load time</li>
               <li>Difficult to time</li>
@@ -231,7 +242,7 @@ class Launch extends Component {
             </ul>
           </div>
           <Code>
-            {"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: grab; }"}
+            {"ul, ul li { transition: all 0.2s ease-in-out 0.05s; cursor: default; }"}
             {"ul:hover { transform: scale(1.1); }"}
             {"ul:hover li { transform: translateX(1em); opacity: 0.6; }"}
             {"ul li:hover { transform: translateX(0); opacity: 1; }"}
@@ -274,15 +285,17 @@ class Launch extends Component {
           <Code>
             {'for (i = 0; i < 360; i++) { dot = document.createElement...'}
             {' '}
+            {'let dotsTimeline = gsap.timeline({ scrollTrigger: ".js-dots-section" })'}
+
+            {' '}
             {'gsap.set(dots, {'}
             {'  backgroundColor: "random([#5B16BD,#28a92b,#e77614,#122cb3,#b31232])",'}
             {'  scale: "random(0.4, 1)",'}
-            {'  autoAlpha: 0,'}
+            {'  autoAlpha: 0'}
             {'  ...'}
-            {''}
+            {'.to(dots, { autoAlpha: 1 })'}
             {'.to(dots, {'}
             {'  duration: 5,'}
-            {'  autoAlpha: 1,'}
             {'  physics2D: {'}
             {'    velocity: "random(200, 750)",'}
             {'    angle: "random(250, 290)",'}
@@ -335,7 +348,17 @@ class Launch extends Component {
 
         <Section color="blue">
           <p className="mb-5">This enables designers to build animation assets in thier familiar environments. <br/><br/>While also enabling developers to deliver these animations with 100% fidelity, and abilities to further customize the interations and other attributes.</p>
-          <Lottie loop animationData={lottieCar} play style={{ width: 600, height: 400 }}/>
+          <Lottie loop animationData={lottieEditor} play style={{ width: 600, height: 400 }}/>
+        </Section>
+
+        <Section color="blue">
+          <p className="mb-5">
+            Is this better than using .mp4s?
+            <br/><br/>
+            Probably! Lottie files can be significantly smaller and perform better than some other video renderings.
+          </p>
+          <Lottie loop animationData={lottieDial} play style={{ width: 600, height: 400 }}/>
+          <a className="mt-5 d-block" href="https://drawer.design/blog/why-we-prefer-lottie-over-other-animation/" target="_blank">Why should you prefer Lottie</a>
         </Section>
 
 

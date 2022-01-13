@@ -82,18 +82,12 @@ class LottieDemo extends Component {
               play
               style={{ width: 600, height: 600 }}
             />
+            <p>
+              next time...
+              <br/>
+              Lottie animations with scroll pin trigger
+            </p>
         </Section>
-
-        <Section color="blue">
-          next time...
-
-          Lottie animations with rastor video scenes
-          Lottie animations with scroll pin trigger
-        </Section>
-
-        <footer>
-          <Nav {...this.props}/>
-        </footer>
 
       </article>
     )
