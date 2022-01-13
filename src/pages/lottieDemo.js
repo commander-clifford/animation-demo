@@ -8,6 +8,11 @@ import lottieLab from "./lottieLab.json";
 import lottieStory from "./lottieStory.json";
 import lottieFullStack from "./lottieFullStack.json";
 import lottieBear from "./lottieBear.json";
+import lottieChargeCard from "./lottieChargeCard.json";
+import lottieDisney from "./lottieDisney.json";
+import lottieNetflix from "./lottieNetflix.json";
+import lottiePrime from "./lottiePrime.json";
+import lottieGoogleTV from "./lottieGoogleTV.json";
 
 /**
   *  Lottie ScrollyBicycle
@@ -54,48 +59,85 @@ class LottieDemo extends Component {
         </Section>
 
         <Section color="blue">
-            <Lottie
-              animationData={lottieBicycle}
-              play
-              style={{ width: 600, height: 600 }}
-            />
+          <Lottie
+            animationData={lottieBicycle}
+            play
+            style={{ width: 600, height: 600 }}
+          />
         </Section>
 
         <Section color="blue">
-            <Lottie
-              animationData={lottieLab}
-              play
-              style={{ width: 600, height: 600 }}
-            />
+          <Lottie
+            animationData={lottieLab}
+            play
+            style={{ width: 600, height: 600 }}
+          />
         </Section>
 
         <Section color="blue">
-            <Lottie
-              animationData={lottieStory}
-              play
-              style={{ width: 600, height: 600 }}
-            />
+          <Lottie
+            animationData={lottieChargeCard}
+            play
+            style={{ width: 600, height: 600 }}
+          />
         </Section>
 
         <Section color="blue">
-            <Lottie
-              animationData={lottieFullStack}
-              play
-              style={{ width: 600, height: 600 }}
-            />
-            <p>
-              The rare<br/>
-              Full Stack Designer<br/>
-              in it's native habitate
-            </p>
+          <Lottie
+            animationData={lottieStory}
+            play
+            style={{ width: 600, height: 600 }}
+          />
         </Section>
 
         <Section color="blue">
-            <Lottie
-              animationData={lottieBear}
-              play
-              style={{ width: 600, height: 600 }}
-            />
+          <Lottie
+            animationData={lottieNetflix}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+        </Section>
+        <Section color="blue">
+          <Lottie
+            animationData={lottieDisney}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+        </Section>
+        <Section color="blue">
+          <Lottie
+            animationData={lottiePrime}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+        </Section>
+        <Section color="blue">
+          <Lottie
+            animationData={lottieGoogleTV}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+        </Section>
+
+        <Section color="blue">
+          <Lottie
+            animationData={lottieFullStack}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+          <p>
+            The rare<br/>
+            Full Stack Designer<br/>
+            in it's native habitate
+          </p>
+        </Section>
+
+        <Section color="blue">
+          <Lottie
+            animationData={lottieBear}
+            play
+            style={{ width: 600, height: 600 }}
+          />
             <p>
               next time...
               <br/>

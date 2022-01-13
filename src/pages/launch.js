@@ -12,6 +12,7 @@ import lottieBear from "./lottieBear.json";
 import lottieCar from "./lottieCar.json";
 import lottieEditor from "./lottieEditor.json";
 import lottieDial from "./lottieDial.json";
+import lottieBalls from "./lottieBalls.json";
 import { create } from "@lottiefiles/lottie-interactivity";
 
 ScrollTrigger.defaults({
@@ -358,7 +359,12 @@ class Launch extends Component {
 
 
         <Section color="blue">
-          <p className="mb-5"><b>SPOILER ALERT!!</b><br/>Lottie animations are JS animations!<br/><br/>However!<br/>Lottie is SO amazing because these animation assets are direct exports from AfterEffects!!!</p>
+          <p className="mb-5"><b>SPOILER ALERT!!</b><br/>Lottie animations are JS animations! Well kind of.</p>
+          <Lottie loop animationData={lottieBalls} play style={{ width: 400, height: 400 }}/>
+        </Section>
+
+        <Section color="blue">
+          <p className="mb-5">Lottie animations are SO amazing because these animation assets are direct exports from AfterEffects!!!</p>
           <Lottie loop animationData={lottieBear} play style={{ width: 400, height: 400 }}/>
         </Section>
 

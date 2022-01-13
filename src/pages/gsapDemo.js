@@ -15,6 +15,8 @@ class GsapDemo extends Component {
           <h1 className="art__stagger-in">JS (GSAP) Animations</h1>
         </Section>
 
+
+
         <Section color="green">
           <iframe style={{width: '60vw', height: '80vh'}} scrolling="no" title="CSS GRID ANIMATION GSAP" src="https://codepen.io/GreenSock/embed/qBPqGXd?default-tab=result&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href="https://codepen.io/GreenSock/pen/qBPqGXd">
@@ -40,7 +42,6 @@ class GsapDemo extends Component {
         <Section color="green">
           <h1 className="art__stagger-in">GSAP Hubble ></h1>
         </Section>
-
 
         <footer>
           <Nav {...this.props}/>
