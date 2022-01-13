@@ -15,8 +15,6 @@ class GsapDemo extends Component {
           <h1 className="art__stagger-in">JS (GSAP) Animations</h1>
         </Section>
 
-
-
         <Section color="green">
           <iframe style={{width: '60vw', height: '80vh'}} scrolling="no" title="CSS GRID ANIMATION GSAP" src="https://codepen.io/GreenSock/embed/qBPqGXd?default-tab=result&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href="https://codepen.io/GreenSock/pen/qBPqGXd">
@@ -32,6 +30,7 @@ class GsapDemo extends Component {
           on <a href="https://codepen.io">CodePen</a>.
           </iframe>
         </Section>
+
         <Section color="green">
           <iframe style={{width: '60vw', height: '80vh'}} scrolling="no" title="Smooth Scroll with ScrollTrigger Natively" src="https://codepen.io/GreenSock/embed/QWqwVXG?default-tab=result&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
           See the Pen <a href="https://codepen.io/GreenSock/pen/QWqwVXG">
@@ -41,6 +40,8 @@ class GsapDemo extends Component {
         </Section>
         <Section color="green">
           <h1 className="art__stagger-in">GSAP Hubble ></h1>
+
+          <a className="mt-5 d-block" href="https://commander-clifford.github.io/max-prototypes/hubble" target="_blank">Go</a>
         </Section>
 
         <footer>

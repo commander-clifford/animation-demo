@@ -13,6 +13,7 @@ import lottieDisney from "./lottieDisney.json";
 import lottieNetflix from "./lottieNetflix.json";
 import lottiePrime from "./lottiePrime.json";
 import lottieGoogleTV from "./lottieGoogleTV.json";
+import lottieEmail from "./lottieEmail.json";
 
 /**
   *  Lottie ScrollyBicycle
@@ -68,6 +69,14 @@ class LottieDemo extends Component {
 
         <Section color="blue">
           <Lottie
+            animationData={lottieStory}
+            play
+            style={{ width: 600, height: 600 }}
+          />
+        </Section>
+
+        <Section color="blue">
+          <Lottie
             animationData={lottieLab}
             play
             style={{ width: 600, height: 600 }}
@@ -84,7 +93,7 @@ class LottieDemo extends Component {
 
         <Section color="blue">
           <Lottie
-            animationData={lottieStory}
+            animationData={lottieEmail}
             play
             style={{ width: 600, height: 600 }}
           />
@@ -133,6 +142,7 @@ class LottieDemo extends Component {
         </Section>
 
         <Section color="blue">
+          <p>The End</p>
           <Lottie
             animationData={lottieBear}
             play
@@ -141,7 +151,7 @@ class LottieDemo extends Component {
             <p>
               next time...
               <br/>
-              Lottie animations with scroll pin trigger
+              Lottie + GSAP animations to enable scroll pin triggers 🤯
             </p>
         </Section>
 

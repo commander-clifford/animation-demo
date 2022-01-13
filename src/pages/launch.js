@@ -355,17 +355,20 @@ class Launch extends Component {
             {'      "nm": "Shape Layer 2",'}
             {'... ... ...'}
           </Code>
+
         </Section>
 
 
         <Section color="blue">
-          <p className="mb-5"><b>SPOILER ALERT!!</b><br/>Lottie animations are JS animations! Well kind of.</p>
+          <p className="mb-5"><b>SPOILER ALERT!!</b><br/>Lottie animations are JS animations!<br/>Well kind of.</p>
           <Lottie loop animationData={lottieBalls} play style={{ width: 400, height: 400 }}/>
         </Section>
 
         <Section color="blue">
           <p className="mb-5">Lottie animations are SO amazing because these animation assets are direct exports from AfterEffects!!!</p>
           <Lottie loop animationData={lottieBear} play style={{ width: 400, height: 400 }}/>
+          <a className="mt-5 d-block" href="https://airbnb.io/lottie/#/" target="_blank">Lottie + BodyMovin</a>
+          <a className="mt-5 d-block" href="https://lottiefiles.com/" target="_blank">LottieFiles</a>
         </Section>
 
         <Section color="blue">
