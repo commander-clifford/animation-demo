@@ -275,6 +275,7 @@ class Launch extends Component {
             {';'}
             {'return timeline;'}
           </Code>
+          <a className="mt-5 d-block" href="https://greensock.com/gsap/" target="_blank">GreenSock Animation Platform</a>
         </Section>
 
         <Section classy="js-balls-section" color="green">
@@ -290,6 +291,8 @@ class Launch extends Component {
             {'  backgroundColor: "random([#5B16BD,#28a92b,#e77614,#122cb3,#b31232])",'}
             {'  scale: "random(0.4, 1)",'}
             {'  autoAlpha: 0'}
+            {'  x:0,'}
+          	{'  y:0'}
             {'  ...'}
             {'.to(dots, { autoAlpha: 1 })'}
             {'.to(dots, {'}
