@@ -2,39 +2,27 @@
   display: flex;
 
   .options {
-    display: block;
-    background: white;
-    height: 60px;
-    margin: 2em;
-    padding: 1em;
-    color: #030327;
-    font-weight: bold;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    width: 160px;
+    height: 160px;
+    margin: 2em;
+    background: transparent;
+    backdrop-filter: blur(2px) brightness(90%) invert(0.9);
+    color: #030327;
+    color: #FFFFFF;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -80px;
-      width: 0;
-      height: 0;
-      border-left: 40px solid transparent;
-      border-right: 40px solid white;
-      border-top: 60px solid transparent;
-      transform: rotateX(180deg);
-    }
-    
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 100%;
-      width: 0;
-      height: 0;
-      border-left: 40px solid white;
-      border-right: 40px solid transparent;
-      border-top: 60px solid transparent;
+    &:hover {
+      transform: scale(1.1);
+      border: 2px solid white;
+      backdrop-filter: blur(0px) brightness(80%) invert(1);
     }
   }
 }

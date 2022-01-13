@@ -14,10 +14,6 @@ import lottieEditor from "./lottieEditor.json";
 import lottieDial from "./lottieDial.json";
 import { create } from "@lottiefiles/lottie-interactivity";
 
-
-
-
-
 ScrollTrigger.defaults({
   toggleActions: "restart pause resume pause",
   scroller: ".component",
@@ -106,6 +102,7 @@ class Launch extends Component {
     let increasedScale = 1.1;
 
     let timeline = gsap.timeline({
+      delay: stagger,
       scrollTrigger:{
         trigger: jsListSection,
       },
@@ -338,6 +335,25 @@ class Launch extends Component {
           <h2 className="hero d-flex flex-row justify-content-center align-items-center">
             I <Lottie loop animationData={lottieHeart} play style={{ width: 150, height: 150 }}/> Lottie Animations
           </h2>
+          <Code>
+            {'{'}
+            {'  "v": "4.10.1",'}
+            {'  "fr": 25,'}
+            {'  "ip": 0,'}
+            {'  "op": 75,'}
+            {'  "w": 75,'}
+            {'  "h": 75,'}
+            {'  "nm": "Heart spark",'}
+            {'  "ddd": 0,'}
+            {'  "assets": [],'}
+            {'  "layers": ['}
+            {'    {'}
+            {'      "ddd": 0,'}
+            {'      "ind": 1,'}
+            {'      "ty": 4,'}
+            {'      "nm": "Shape Layer 2",'}
+            {'... ... ...'}
+          </Code>
         </Section>
 
 

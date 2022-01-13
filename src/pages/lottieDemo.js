@@ -7,6 +7,7 @@ import lottieBicycle from "./lottieBicycle.json";
 import lottieLab from "./lottieLab.json";
 import lottieStory from "./lottieStory.json";
 import lottieFullStack from "./lottieFullStack.json";
+import lottieBear from "./lottieBear.json";
 
 /**
   *  Lottie ScrollyBicycle
@@ -79,6 +80,19 @@ class LottieDemo extends Component {
         <Section color="blue">
             <Lottie
               animationData={lottieFullStack}
+              play
+              style={{ width: 600, height: 600 }}
+            />
+            <p>
+              The rare<br/>
+              Full Stack Designer<br/>
+              in it's native habitate
+            </p>
+        </Section>
+
+        <Section color="blue">
+            <Lottie
+              animationData={lottieBear}
               play
               style={{ width: 600, height: 600 }}
             />
