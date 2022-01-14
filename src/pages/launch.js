@@ -159,7 +159,7 @@ class Launch extends Component {
       <article className="component pattern-three">
 
         <Section color="red">
-          <p className="art__stagger">Why I love </p>
+          <p className="art__stagger">I love </p>
           <h1 className="hero art__stagger-in">Web Animations</h1>
           <p className="art__stagger">a web demo by Clifford Nelson</p>
         </Section>
