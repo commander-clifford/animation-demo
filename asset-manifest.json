@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/animation-demo/static/css/main.3593a633.chunk.css",
-    "main.js": "/animation-demo/static/js/main.23207774.chunk.js",
-    "main.js.map": "/animation-demo/static/js/main.23207774.chunk.js.map",
-    "runtime-main.js": "/animation-demo/static/js/runtime-main.bda510b6.js",
-    "runtime-main.js.map": "/animation-demo/static/js/runtime-main.bda510b6.js.map",
-    "static/css/2.8c0e6b67.chunk.css": "/animation-demo/static/css/2.8c0e6b67.chunk.css",
-    "static/js/2.deddc40c.chunk.js": "/animation-demo/static/js/2.deddc40c.chunk.js",
-    "static/js/2.deddc40c.chunk.js.map": "/animation-demo/static/js/2.deddc40c.chunk.js.map",
-    "index.html": "/animation-demo/index.html",
-    "static/css/2.8c0e6b67.chunk.css.map": "/animation-demo/static/css/2.8c0e6b67.chunk.css.map",
-    "static/css/main.3593a633.chunk.css.map": "/animation-demo/static/css/main.3593a633.chunk.css.map",
-    "static/js/2.deddc40c.chunk.js.LICENSE.txt": "/animation-demo/static/js/2.deddc40c.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/animation-demo/static/media/Gilroy-UltraLightItalic.133c3ad8.otf"
+    "main.css": "/static/css/main.fa282624.chunk.css",
+    "main.js": "/static/js/main.474960d5.chunk.js",
+    "main.js.map": "/static/js/main.474960d5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5fcf58f7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5fcf58f7.js.map",
+    "static/css/2.8c0e6b67.chunk.css": "/static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.82055f70.chunk.js": "/static/js/2.82055f70.chunk.js",
+    "static/js/2.82055f70.chunk.js.map": "/static/js/2.82055f70.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.8c0e6b67.chunk.css.map": "/static/css/2.8c0e6b67.chunk.css.map",
+    "static/css/main.fa282624.chunk.css.map": "/static/css/main.fa282624.chunk.css.map",
+    "static/js/2.82055f70.chunk.js.LICENSE.txt": "/static/js/2.82055f70.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/Gilroy-UltraLightItalic.133c3ad8.otf"
   },
   "entrypoints": [
-    "static/js/runtime-main.bda510b6.js",
+    "static/js/runtime-main.5fcf58f7.js",
     "static/css/2.8c0e6b67.chunk.css",
-    "static/js/2.deddc40c.chunk.js",
-    "static/css/main.3593a633.chunk.css",
-    "static/js/main.23207774.chunk.js"
+    "static/js/2.82055f70.chunk.js",
+    "static/css/main.fa282624.chunk.css",
+    "static/js/main.474960d5.chunk.js"
   ]
 }
